@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectos de Imágenes al Pasar el Cursor</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .image-effect {
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        /* Efecto esquinas redondeadas */
+        .rounded:hover {
+            border-radius: 15px;
+        }
+
+        /* Efecto sombra */
+        .shadow:hover {
+            filter: drop-shadow(30px 10px 4px #4444dd);
+        }
+
+        /* Efecto opacidad */
+        .opacity:hover {
+            opacity: 0.7;
+        }
+
+        /* Efecto difuminado */
+        .blur:hover {
+            filter: blur(5px);
+        }
+
+        /* Efecto saturado */
+        .saturate:hover {
+            filter: saturate(2);
+        }
+
+        /* Escala de grises */
+        .grayscale:hover {
+            filter: grayscale(100%);
+        }
+
+        /* Ajuste de brillo */
+        .brightness:hover {
+            filter: brightness(1.5);
+        }
+
+        /* Variación de tono */
+        .hue-rotate:hover {
+            filter: hue-rotate(90deg);
+        }
+
+        /* Efecto sepia */
+        .sepia:hover {
+            filter: sepia(1);
+        }
+
+        /* Efecto box shadow */
+        .box-shadow:hover {
+            box-shadow: 10px 10px 30px rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="dados-removebg-preview.png" alt="Rounded" class="image-effect rounded">
+        <img src="dados-removebg-preview.png" alt="Shadow" class="image-effect shadow">
+        <img src="dados-removebg-preview.png" alt="Opacity" class="image-effect opacity">
+        <img src="dados-removebg-preview.png" alt="Blur" class="image-effect blur">
+        <img src="dados-removebg-preview.png" alt="Saturate" class="image-effect saturate">
+        <img src="dados-removebg-preview.png" alt="Grayscale" class="image-effect grayscale">
+        <img src="dados-removebg-preview.png" alt="Brightness" class="image-effect brightness">
+        <img src="dados-removebg-preview.png" alt="Hue Rotate" class="image-effect hue-rotate">
+        <img src="dados-removebg-preview.png" alt="Sepia" class="image-effect sepia">
+        <img src="dados-removebg-preview.png" alt="Box Shadow" class="image-effect box-shadow">
+    </div>
+</body>
+</html>

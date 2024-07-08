@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+    
+<body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-View en CSS</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Century Schoolbook;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background-color:  #d12d2d;
+            font-family: Snowy Night;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f8d2e8;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            background-color: black;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+        }
+
+        nav ul li ul.submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f8d2e8;
+            list-style: none;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover ul.submenu {
+            display: block;
+        }
+
+        nav ul li ul.submenu li {
+            margin: 0;
+        }
+
+        nav ul li ul.submenu li a {
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+
+
+        .hero {
+            background: url('https://i.pinimg.com/originals/57/f4/84/57f484897b2bce28617e07190a02814f.jpg') no-repeat center center/cover;
+            height: 400px;
+            font-family: Century;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .content .card {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 800px;
+            max-width: 400px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grid-View en CSS</h1>
+    </header>
+   <nav>
+        <ul class="menu">
+            <li>
+                <a href="seminario.html">Inicio</a>
+            </li>
+            <li>
+                <a href="categoria1.html">Gestión del Ciclo de Vida de las aplicaciones</a>
+            </li>
+            <li>
+                <a href="#categoria2">Gráficos y Animación</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria2-1.html">Elementos Canvas</a></li>
+                    <li><a href="subcategoria2-2.html">Círculos y Arcos</a></li>
+                    <li><a href="subcategoria2-3.html">SVG en HTML</a></li>
+                    <li><a href="subcategoria2-4.html">Filtros SVG</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria3">Formularios</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria3-1.html">Validación en Formularios</a></li>
+                    <li><a href="subcategoria3-2.html">Número Máximo y Mínimo</a></li>
+                    <li><a href="subcategoria3-3.html">Campos Requeridos, Deshabilitados y de Lectura</a></li>
+                    <li><a href="subcategoria3-4.html">Partes de un Formulario</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria4">Diseño</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria4-1.html">Diseño, Posicionamiento y Flujo</a></li>
+                    <li><a href="subcategoria4-2.html">Posicionamiento de Elementos</a></li>
+                    <li><a href="subcategoria4-3.html">Desbordamiento</a></li>
+                    <li><a href="subcategoria4-4.html">Grid-View en CSS</a></li>
+                    
+                </ul>
+            </li>
+            <li>
+                <a href="ejemplos.html">Más ejemplos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h2>¿QUÉ ES?</h2>
+            <h3> 
+En el desarrollo web, un Grid Layout, también conocido como Diseño de Cuadrícula o CSS Grid, es un sistema de diseño bidimensional que permite organizar y posicionar elementos de forma flexible y eficiente dentro de una página web. Una página web dinámica, es aquella que se adapta a
+diferentes tamaños de pantalla, existen herramientas que
+
+nos permiten que las páginas respondan a ciertos
+factores generalmente el ancho de pantalla del
+
+dispositivo y la resolución de la pantalla, sin tener que sin
+
+recargar el contenido.</h3>
+        </div>
+    </section>
+    <section class="content">
+        <div class="card">
+            <h2>Grid View</h2>
+            <p>Es una técnica que implica el diseño de 12 columnas, con
+esto podemos ajustar los contenidos de acuerdo al ancho
+de la pantalla, lo que facilita la colocación de elementos
+
+en la pantalla.
+            <br>
+        </div>
+        <div class="card">
+            <h2> Background-size</h2>
+            <p>Es una propiedad de CSS que especifica como un
+
+navegador web debe mostrar una imagen como fondo
+
+para una página web.
+
+Dependiendo de la calidad y del estilo de la imagen se
+puede establecer cómo queremos que esta se muestre.
+        </div>
+    
+        <div class="card">
+            <h2> Componentes Principales </h2>
+            <p><em>-Contenedor de la cuadrícula:</em> Es el elemento HTML que define el área donde se aplicará el diseño de cuadrícula.exclamation Se identifica con la propiedad display: grid o display: inline-grid.
+<br>
+<em>-Líneas y columnas:</em> Dividen el contenedor en celdas. Se definen con las propiedades grid-template-rows y grid-template-columns.
+<br>
+<em>-Áreas de cuadrícula:</em> Son las secciones nombradas que se crean dentro de la cuadrícula para colocar elementos específicos. Se definen con la propiedad grid-template-areas.
+<br>
+<em>-Ubicación de elementos:</em> Los elementos HTML se posicionan dentro de las celdas o áreas de la cuadrícula usando las propiedades grid-row-start, grid-row-end, grid-column-start y grid-column-end.
+        </div>
+        
+       <div class="card">
+            <h3>Código de Ejemplo:</h3>
+            <pre>
+                <code>
+    &lt; /* Estilos CSS */
+    .contenedor {
+      display: grid; /* Activar el diseño de cuadrícula */
+      grid-template-columns: repeat(3, 1fr); /* Definir 3 columnas de igual tamaño */
+      grid-gap: 20px; /* Espacio entre celdas */
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .item {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 10px;
+    }
+   &lt;/style>
+ &lt;/head>
+ &lt;body>
+   &lt;div class="contenedor">
+     &lt;div class="item">Elemento 1 &lt;/div>
+     &lt;div class="item">Elemento 2 &lt;/div>
+     &lt;div class="item">Elemento 3 &lt;/div>
+     &lt;div class="item">Elemento 4 &lt;/div>
+     &lt;div class="item">Elemento 5 &lt;/div>
+     &lt;div class="item">Elemento 6 &lt;/div>
+   &lt;/div>
+ &lt;/body>
+  
+                </code>
+            </pre>
+        </div>
+    </section>
+    
+
+    <header>
+       <h1>Ejemplo</h1>
+    </header>
+    
+    <section class="content">
+        <div class="card">
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Grid Layout</title>
+  <style>
+    /* Estilos CSS */
+    .contenedor {
+      display: grid; /* Activar el diseño de cuadrícula */
+      grid-template-columns: repeat(3, 1fr); /* Definir 3 columnas de igual tamaño */
+      grid-gap: 20px; /* Espacio entre celdas */
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .item {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="item">Elemento 1</div>
+    <div class="item">Elemento 2</div>
+    <div class="item">Elemento 3</div>
+    <div class="item">Elemento 4</div>
+    <div class="item">Elemento 5</div>
+    <div class="item">Elemento 6</div>
+  </div>
+</body>
+  
+      
+       
+    </section>
+    <footer>
+        <p>&copy;2024 SEMINARIO PLANTEL CECYTEM METEPEC II REGINA MARTÍNEZ GONZÁLEZ</p>
+    </footer>

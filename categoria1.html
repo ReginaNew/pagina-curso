@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión del Ciclo de Vida de las aplicaciones</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Century Schoolbook;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background-color:  #1a3b89;
+            font-family: Snowy Night;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            background-color: black;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+        }
+
+        nav ul li ul.submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f8d2e8;
+            list-style: none;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover ul.submenu {
+            display: block;
+        }
+
+        nav ul li ul.submenu li {
+            margin: 0;
+        }
+
+        nav ul li ul.submenu li a {
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+
+
+        .hero {
+            background: url('https://www.adecco.es/-/media/adeccogroup/brands/adecco-global-2016/spain/media/insights/tecnologias-del-futuro-y-el-impacto-en-tu-negocio.jpg?h=2812&iar=0&w=5000&rev=b4f6ccaaa514422dae2be7358b1dc32b&hash=FB0B714ADDDE4FAC714B80A5F534EE29') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .content .card {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestión del Ciclo de Vida de las aplicaciones</h1>
+    </header>
+   <nav>
+        <ul class="menu">
+            <li>
+                <a href="seminario.html">Inicio</a>
+            </li>
+            <li>
+                <a href="categoria1.html">Gestión del Ciclo de Vida de las aplicaciones</a>
+            </li>
+            <li>
+                <a href="#categoria2">Gráficos y Animación</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria2-1.html">Elementos Canvas</a></li>
+                    <li><a href="subcategoria2-2.html">Círculos y Arcos</a></li>
+                    <li><a href="subcategoria2-3.html">SVG en HTML</a></li>
+                    <li><a href="subcategoria2-4.html">Filtros SVG</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria3">Formularios</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria3-1.html">Validación en Formularios</a></li>
+                    <li><a href="subcategoria3-2.html">Número Máximo y Mínimo</a></li>
+                    <li><a href="subcategoria3-3.html">Campos Requeridos, Deshabilitados y de Lectura</a></li>
+                    <li><a href="subcategoria3-4.html">Partes de un Formulario</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria4">Diseño</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria4-1.html">Diseño, Posicionamiento y Flujo</a></li>
+                    <li><a href="subcategoria4-2.html">Posicionamiento de Elementos</a></li>
+                    <li><a href="subcategoria4-3.html">Desbordamiento</a></li>
+                    <li><a href="subcategoria4-4.html">Grid-View en CSS</a></li>
+                    <li><a href="subcategoria4-5.html">Grids en CSS</a></li>
+                     <li>
+                <a href="ejemplos.html">Más Ejemplos</a>
+            </li>
+                </ul>
+            </li>
+            <li>
+                <a href="ejemplos.html">Más ejemplos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h2>¿QUÉ ES?</h2>
+            <h3>La Gestión del Ciclo de Vida de las Aplicaciones (Application Lifecycle Management o ALM) es un conjunto de procesos, herramientas y metodologías que abordan la gestión de la vida completa de una aplicación desde su concepción hasta su retiro.</h3>
+        </div>
+    </section>
+    <section class="content">
+        <div class="card">
+            <h3>Planificación</h3>
+            <p>Una vez que se concibe una idea un equipo de desarrollo puede comenzar con el proceso. Esta es una fase donde se plantea una idea general, el objetivo final de la aplicación y su alcance.</p>
+        </div>
+        <div class="card">
+            <h3>Diseño</h3>
+            <p>Se realizan los elementos específicos de la aplicación: la estructura de los archivos, la arquitectura de programas, esquema de colores a utilizar, el diseño de la interfaz de usuario (IU).</p>
+        </div>
+        <div class="card">
+            <h3>Desarrollo</h3>
+            <p>Se refiere a la programación de la aplicación y compilación, se utilizan herramientas como el GIT y GITHUB.</p>
+        </div>
+        <div class="card">
+            <h3>Pruebas</h3>
+            <p>Generalmente se realizan en SandBox: es un entorno virtual que imita un entorno de producción real. Se busca errores, anomalías, fallas o cualquier situación que evite la funcionalidad o consistencia de la aplicación.</p>
+        </div>
+        <div class="card">
+            <h3>Implementación</h3>
+            <p>Desarrollo que libera la aplicación terminada, para que este disponible en todos los usuarios y los medios adecuados.</p>
+        </div>
+        <div class="card">
+            <h3>Mantenimiento</h3>
+            <p>Es la última etapa de la gestón del ciclo de vida de una aplicación, se debe evaluar la funcionalidad  y seguridad del software. Establece como una forma de comunicación de los usuarios puede optimizar la experiencia y aumentar la eficiencia.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 SEMINARIO PLANTEL CECYTEM METEPEC II REGINA MARTÍNEZ GONZÁLEZ</p>
+    </footer>
+</body>
+</html>

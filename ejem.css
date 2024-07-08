@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav1 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav1 li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav1 a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    display: flex;
+}
+
+.seccion-izquierda {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.seccion-derecha {
+    width: 50%;
+    text-align: center;
+}
+

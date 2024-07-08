@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño, Posicionamiento y Flujo</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Century Schoolbook;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background-color:  #f8d2e8;
+            font-family: Snowy Night;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f8d2e8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f8d2e8;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            background-color: black;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+        }
+
+        nav ul li ul.submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f8d2e8;
+            list-style: none;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover ul.submenu {
+            display: block;
+        }
+
+        nav ul li ul.submenu li {
+            margin: 0;
+        }
+
+        nav ul li ul.submenu li a {
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+
+
+        .hero {
+            background: url('https://static.vecteezy.com/system/resources/previews/023/041/963/non_2x/pink-paper-background-pink-hd-wallpapers-in-the-style-of-organic-fluid-shapes-encaustic-tanya-shatseva-marble-digitally-enhanced-close-up-poured-generate-ai-free-photo.jpg') no-repeat center center/cover;
+            height: 400px;
+            font-family: Century;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .content .card {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 900px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diseño, Posicionamiento y Flujo</h1>
+    </header>
+   <nav>
+        <ul class="menu">
+            <li>
+                <a href="seminario.html">Inicio</a>
+            </li>
+            <li>
+                <a href="categoria1.html">Gestión del Ciclo de Vida de las aplicaciones</a>
+            </li>
+            <li>
+                <a href="#categoria2">Gráficos y Animación</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria2-1.html">Elementos Canvas</a></li>
+                    <li><a href="subcategoria2-2.html">Círculos y Arcos</a></li>
+                    <li><a href="subcategoria2-3.html">SVG en HTML</a></li>
+                    <li><a href="subcategoria2-4.html">Filtros SVG</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria3">Formularios</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria3-1.html">Validación en Formularios</a></li>
+                    <li><a href="subcategoria3-2.html">Número Máximo y Mínimo</a></li>
+                    <li><a href="subcategoria3-3.html">Campos Requeridos, Deshabilitados y de Lectura</a></li>
+                    <li><a href="subcategoria3-4.html">Partes de un Formulario</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria4">Diseño</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria4-1.html">Diseño, Posicionamiento y Flujo</a></li>
+                    <li><a href="subcategoria4-2.html">Posicionamiento de Elementos</a></li>
+                    <li><a href="subcategoria4-3.html">Desbordamiento</a></li>
+                    <li><a href="subcategoria4-4.html">Grid-View en CSS</a></li>
+                   
+                </ul>
+            </li>
+            <li>
+                <a href="ejemplos.html">Más ejemplos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h2>¿QUÉ ES?</h2>
+            <h3> En HTML, el diseño, el posicionamiento y el flujo se refieren a tres aspectos esenciales para estructurar y organizar el contenido de una página web. Para el desarrollo de aplicaciones web es necesario
+
+asegurarse que le contenido podrá adaptarse a diferentes
+tamaños de pantallas, sin necesidad de grandes ajustes
+
+en el código. </h3>
+        </div>
+    </section>
+    <section class="content">
+        <div class="card">
+            <h2>Diseño</h2>
+            <p>El diseño web se enfoca en la apariencia visual de la página, utilizando elementos HTML y CSS para crear una estructura atractiva y organizada. Esto implica aspectos como la distribución de elementos, la elección de colores, tipografías, imágenes y otros recursos visuales que contribuyen a la estética y usabilidad de la página.
+            <br>
+        </div>
+        <div class="card">
+            <h2>Posicionamiento</h2>
+            <p>El posicionamiento web se refiere a la ubicación exacta de cada elemento HTML dentro de la página. Se utilizan propiedades CSS como position, top, left, bottom y right para controlar la posición de los elementos de forma precisa, ya sea en relación con otros elementos o con el borde de la ventana del navegador.
+        </div>
+    
+        <div class="card">
+            <h2>Flujo</h2>
+            <p>El flujo web define cómo se distribuyen los elementos HTML en la página de forma natural, siguiendo un orden lógico y adaptándose al ancho de la pantalla. Esto se logra principalmente utilizando etiquetas HTML como div, header, section, article, aside y footer, que permiten crear secciones y contenedores para organizar el contenido de manera estructurada.
+
+        </div>
+        
+        <div class="card">
+           
+            <p>En conjunto, el diseño, el posicionamiento y el flujo son aspectos fundamentales para crear páginas web visualmente atractivas, fáciles de usar y adaptables a diferentes dispositivos y tamaños de pantalla. La combinación adecuada de estas técnicas permite a los desarrolladores web crear experiencias de usuario óptimas y con un diseño atractivo.
+        </div>
+        
+       <div class="card">
+            <h3>Código de Ejemplo:</h3>
+            <pre>
+                <code>
+    &lt;header>
+        &lt;h2>Ejemplo de diseño web&lt;/h2>
+        &lt;nav1>
+            &lt;ul>
+                &lt;li>&lt;a href="#">Inicio&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Acerca de&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Contacto&lt;/a>&lt;/li>
+            &lt;/ul>
+        &lt;/nav1>
+    &lt;/header>
+
+    &lt;main>
+        &lt;section class="seccion-izquierda">
+            &lt;h2>Sección izquierda&lt;/h2>
+            &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            <br>
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+            <br>Sed tempus leo ut nunc bibendum, vitae mollis enim faucibus. Nam at lectus eget eros semper porta. 
+            Nullam at enim eget mauris aliquet semper.&lt;/p>
+        &lt;/section>
+
+        &lt;section class="seccion-derecha">
+             &lt;h2>Sección derecha&lt;/h2>
+        
+            &lt;img src="imagen.png" alt="Imagen de ejemplo" width="250" height="250">
+          
+        &lt;/section>
+    &lt;/main>
+    &lt;footer>
+        &lt;p>&copy; 2024 Mi sitio web&lt;/p>
+    &lt;/footer>
+
+                </code>
+            </pre>
+        </div>
+    </section>
+    
+
+    <header>
+       <h1>Ejemplo</h1>
+    </header>
+    <section class="content">
+        
+        <div class="card">
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Diseño, Posicionamiento y Flujo</title>
+    <link rel="stylesheet" href="ejem.css">
+<body>
+    <header>
+        <h2>Ejemplo de diseño web</h2>
+        <nav1>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav1>
+    </header>
+
+    <main>
+        <section class="seccion-izquierda">
+            <h2>Sección izquierda</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed tempus leo ut nunc bibendum, vitae mollis enim faucibus. Nam at lectus eget eros semper porta. Nullam at enim eget mauris aliquet semper.</p>
+        </section>
+
+        <section class="seccion-derecha">
+             <h2>Sección derecha</h2>
+        
+            <img src="imagen.png" alt="Imagen de ejemplo" width="250" height="250">
+          
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mi sitio web</p>
+    </footer>
+            </body>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;2024 SEMINARIO PLANTEL CECYTEM METEPEC II REGINA MARTÍNEZ GONZÁLEZ</p>
+    </footer>
+</body>
+</html>

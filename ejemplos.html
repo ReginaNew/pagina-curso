@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas ejemplos</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Century Schoolbook;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background-color:  #ffceb0;
+            font-family: Snowy Night;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            background-color: black;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+        }
+
+        nav ul li ul.submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f8d2e8;
+            list-style: none;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover ul.submenu {
+            display: block;
+        }
+
+        nav ul li ul.submenu li {
+            margin: 0;
+        }
+
+        nav ul li ul.submenu li a {
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+
+
+        .hero {
+            background: url('https://marketplace.canva.com/EAFcLpiTbQU/1/0/1600w/canva-fondo-de-pantalla-abstracto-formas-org%C3%A1nicas-rosado-mJ4HqCwM8fA.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .content .card {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Más Ejemplos</h1>
+    </header>
+   <nav>
+        <ul class="menu">
+            <li>
+                <a href="seminario.html">Inicio</a>
+            </li>
+            <li>
+                <a href="categoria1.html">Gestión del Ciclo de Vida de las aplicaciones</a>
+            </li>
+            <li>
+                <a href="#categoria2">Gráficos y Animación</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria2-1.html">Elementos Canvas</a></li>
+                    <li><a href="subcategoria2-2.html">Círculos y Arcos</a></li>
+                    <li><a href="subcategoria2-3.html">SVG en HTML</a></li>
+                    <li><a href="subcategoria2-4.html">Filtros SVG</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria3">Formularios</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria3-1.html">Validación en Formularios</a></li>
+                    <li><a href="subcategoria3-2.html">Número Máximo y Mínimo</a></li>
+                    <li><a href="subcategoria3-3.html">Campos Requeridos, Deshabilitados y de Lectura</a></li>
+                    <li><a href="subcategoria3-4.html">Partes de un Formulario</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria4">Diseño</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria4-1.html">Diseño, Posicionamiento y Flujo</a></li>
+                    <li><a href="subcategoria4-2.html">Posicionamiento de Elementos</a></li>
+                    <li><a href="subcategoria4-3.html">Desbordamiento</a></li>
+                    <li><a href="subcategoria4-4.html">Grid-View en CSS</a></li>
+                    <li><a href="subcategoria4-5.html">Grids en CSS</a></li>
+                    <li>
+                <a href="ejemplos.html">Más Ejemplos</a>
+            </li>
+                </ul>
+            </li>
+            <li>
+                <a href="ejemplos.html">Más ejemplos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h2>Prueba tú mismo</h2>
+        </div>
+    </section>
+    <br>
+    <h1>Dale click a la carita feliz para que se mueva!!!</h1>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    <br>
+    <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJeJWBa" data-pen-title="PARA PROBAR CÓDIGO" data-user="Regina-Mart-nez-Gonz-lez" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/Regina-Mart-nez-Gonz-lez/pen/OJeJWBa">
+  PARA PROBAR CÓDIGO</a> by Regina Martínez González (<a href="https://codepen.io/Regina-Mart-nez-Gonz-lez">@Regina-Mart-nez-Gonz-lez</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+    
+    <footer>
+        <p>&copy; 2024 SEMINARIO PLANTEL CECYTEM METEPEC II REGINA MARTÍNEZ GONZÁLEZ</p>
+    </footer>
+</body>
+</html>

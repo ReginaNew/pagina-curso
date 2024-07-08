@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partes de un Formulario</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Century Schoolbook;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background-color:  #b77bb7;
+            font-family: Snowy Night;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+       
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f8d2e8;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            background-color: black;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+        }
+
+        nav ul li ul.submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f8d2e8;
+            list-style: none;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover ul.submenu {
+            display: block;
+        }
+
+        nav ul li ul.submenu li {
+            margin: 0;
+        }
+
+        nav ul li ul.submenu li a {
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+
+        .hero {
+            background: url('https://c.wallhere.com/photos/3a/ce/Microsoft_digital_art_waveforms_dark_background_colorful-2248720.jpg!d') no-repeat center center/cover;
+            height: 400px;
+            font-family: Century;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .content .card {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 900px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Partes de un Formulario</h1>
+    </header>
+   <nav>
+        <ul class="menu">
+            <li>
+                <a href="seminario.html">Inicio</a>
+            </li>
+            <li>
+                <a href="categoria1.html">Gestión del Ciclo de Vida de las aplicaciones</a>
+            </li>
+            <li>
+                <a href="#categoria2">Gráficos y Animación</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria2-1.html">Elementos Canvas</a></li>
+                    <li><a href="subcategoria2-2.html">Círculos y Arcos</a></li>
+                    <li><a href="subcategoria2-3.html">SVG en HTML</a></li>
+                    <li><a href="subcategoria2-4.html">Filtros SVG</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria3">Formularios</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria3-1.html">Validación en Formularios</a></li>
+                    <li><a href="subcategoria3-2.html">Número Máximo y Mínimo</a></li>
+                    <li><a href="subcategoria3-3.html">Campos Requeridos, Deshabilitados y de Lectura</a></li>
+                    <li><a href="subcategoria3-4.html">Partes de un Formulario</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria4">Diseño</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria4-1.html">Diseño, Posicionamiento y Flujo</a></li>
+                    <li><a href="subcategoria4-2.html">Posicionamiento de Elementos</a></li>
+                    <li><a href="subcategoria4-3.html">Desbordamiento</a></li>
+                    <li><a href="subcategoria4-4.html">Grid-View en CSS</a></li>
+                  
+                </ul>
+            </li>
+            <li>
+                <a href="ejemplos.html">Más ejemplos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h2>¿QUÉ ES?</h2>
+            <h3> Un formulario HTML es una sección de una página web que permite a los usuarios interactuar con el sitio y enviar información al servidor. </h3>
+        </div>
+    </section>
+    <section class="content">
+        <div class="card">
+            <h2>Elemento: Form</h2>
+            <p>Es el elemento principal del formulario y lo define como tal.
+Debe tener los atributos action y method especificados.
+                <br>
+action: Indica la URL del script del lado del servidor que procesará los datos del formulario.
+                <br>
+method: Define el método HTTP que se utilizará para enviar los datos (generalmente GET o POST).
+Puede contener otros elementos HTML dentro de él, como etiquetas de entrada, botones y campos de texto.
+            <br>
+        </div>
+        <div class="card">
+            <h2>Etiquetas de Entrada: Input</h2>
+            <p>Permiten a los usuarios ingresar datos en el formulario.
+Existen diferentes tipos de etiquetas de entrada, como:
+                 <br>
+text: Para texto general.
+                 <br>
+email: Para direcciones de correo electrónico.
+                 <br>
+password: Para contraseñas (se oculta el texto introducido).
+                 <br>
+checkbox: Para casillas de verificación.
+                 <br>
+radio: Para botones de opción.
+                 <br>
+number: Para números.
+                 <br>
+date: Para fechas.
+                 <br>
+file: Para subir archivos.
+                 <br>
+Cada etiqueta de entrada debe tener atributos como type, name (para identificar el dato) y value (valor predeterminado).
+        </div>
+        <div class="card">
+            <h2>Botones de Envio: Submit</h2>
+            <p>Permiten al usuario enviar los datos del formulario al servidor.
+Se pueden personalizar con texto como "Enviar", "Registrarse", etc.
+Cuando se hace clic en el botón, se desencadena el evento submit del formulario.
+        </div>
+        
+        <div class="card">
+            <h2>Etiquetas de Texto: Label</h2>
+            <p>Sirven para asociar una etiqueta descriptiva con un elemento de entrada.
+Se utilizan junto al atributo for de la etiqueta de entrada para vincularlas.
+Mejoran la accesibilidad y la usabilidad del formulario.
+
+        </div>
+        
+        <div class="card">
+            <h2>Campos de Texto: TextArea</h2>
+            <p>Permiten al usuario ingresar texto de varias líneas.
+Se utilizan para comentarios, descripciones detalladas, etc.
+Tienen atributos como rows (número de filas visibles) y cols (número de columnas).
+        </div>
+        
+        <div class="card">
+            <h2>Elementos de Seccion: Select</h2>
+            <p>Presentan al usuario una lista de opciones para seleccionar.
+Se utilizan para categorías, preferencias, etc.
+Contienen etiquetas 'option' dentro de ellas para definir las opciones disponibles.
+        </div>
+        
+        <div class="card">
+            <h2>Atributos Adicionales</h2>
+            <p>required: Indica que el campo es obligatorio y debe completarse.
+                <br>
+disabled: Inhabilita el campo, impidiendo que el usuario lo modifique.
+                  <br>
+readonly: Permite que el usuario vea el valor del campo, pero no lo modifique.
+                  <br>
+placeholder: Muestra un texto de sugerencia dentro del campo cuando está vacío.
+                  <br>
+pattern: Define una expresión regular para validar el formato del dato ingresado.
+        </div>
+        <div class="card">
+            <h3>Código de Ejemplo:</h3>
+            <pre>
+                <code>
+    &lt;form action="procesar_registro.php" method="post" id="registroForm">
+        &lt;div class="form-group">
+            &lt;label for="nombre">Nombre Completo:&lt;/label>
+            &lt;input type="text" id="nombre" name="nombre" class="form-control" required>
+         &lt;/div>
+
+         &lt;div class="form-group">
+             &lt;label for="correo">Correo electrónico: &lt;/label>
+             &lt;input type="email" id="correo" name="correo" class="form-control" required>
+         &lt;/div>
+
+         &lt;div class="form-group">
+             &lt;label for="contrasena">Contraseña: &lt;/label>
+             &lt;input type="password" id="contrasena" name="contrasena" class="form-control" required>
+         &lt;/div>
+
+         &lt;div class="form-group">
+             &lt;label for="confirmarContrasena">Confirmar contraseña: &lt;/label>
+             &lt;input type="password" id="confirmarContrasena" name="confirmarContrasena" class="form-control" required>
+         &lt;/div>
+
+         &lt;div class="form-group">
+             &lt;label for="pais">País: &lt;/label>
+             &lt;select id="pais" name="pais" class="form-control">
+                 &lt;option value="mx">México &lt;/option>
+                 &lt;option value="es">España &lt;/option>
+                 &lt;option value="us">Estados Unidos &lt;/option>
+             &lt;/select>
+        &lt;/div>
+
+        &lt;div class="form-group">
+            &lt;label for="aceptoTerminos">Acepto los términos y condiciones&lt;/label>
+            &lt;input type="checkbox" id="aceptoTerminos" name="aceptoTerminos" class="form-control" required>
+        &lt;/div>
+
+        &lt;button type="submit" class="btn btn-primary">Registrarse&lt;/button>
+    &lt;/form>
+
+                </code>
+            </pre>
+        </div>
+       
+    </section>
+    
+
+    <header>
+       <h1>Ejemplo</h1>
+    </header>
+    <section class="content">
+        
+        <div class="card">
+            <h2>Registro</h2>
+   <form action="procesar_registro.php" method="post" id="registroForm">
+        <div class="form-group">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmarContrasena">Confirmar contraseña:</label>
+            <input type="password" id="confirmarContrasena" name="confirmarContrasena" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" class="form-control">
+                <option value="mx">México</option>
+                <option value="es">España</option>
+                <option value="us">Estados Unidos</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="aceptoTerminos">Acepto los términos y condiciones</label>
+            <input type="checkbox" id="aceptoTerminos" name="aceptoTerminos" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Registrarse</button>
+    </form>
+
+    <script>
+        const registroForm = document.getElementById('registroForm');
+
+        registroForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const contrasena = document.getElementById('contrasena').value;
+            const confirmarContrasena = document.getElementById('confirmarContrasena').value;
+            const pais = document.getElementById('pais').value;
+            const aceptoTerminos = document.getElementById('aceptoTerminos').checked;
+
+            // Validación básica de formulario (puedes ampliarla)
+            if (nombre === '' || correo === '' || contrasena === '' || confirmarContrasena === '' || pais === '' || !aceptoTerminos) {
+                alert('Todos los campos son obligatorios y debes aceptar los términos.');
+                return;
+            }
+
+            if (contrasena !== confirmarContrasena) {
+                alert('Las contraseñas no coinciden.');
+                return;
+            }
+
+            // Enviar datos del formulario al servidor (implementar con AJAX o fetch)
+            // ...
+
+            // Simulando una respuesta exitosa del servidor
+            alert('¡Registro exitoso!');
+            registroForm.reset(); // Limpiar el formulario
+        });
+    </script>
+        </div>
+        
+       
+    </section>
+    <footer>
+        <p>&copy;2024 SEMINARIO PLANTEL CECYTEM METEPEC II REGINA MARTÍNEZ GONZÁLEZ</p>
+    </footer>
+</body>
+</html>

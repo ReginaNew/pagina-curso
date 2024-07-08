@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<body> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros SVG</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Century Schoolbook;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background-color:  #bea564;
+            font-family: Snowy Night;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+       
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f8d2e8;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            background-color: black;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+        }
+
+        nav ul li ul.submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f8d2e8;
+            list-style: none;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover ul.submenu {
+            display: block;
+        }
+
+        nav ul li ul.submenu li {
+            margin: 0;
+        }
+
+        nav ul li ul.submenu li a {
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+
+
+        .hero {
+            background: url('https://png.pngtree.com/background/20230525/original/pngtree-an-intricate-gold-abstract-wallpaper-in-an-hd-format-picture-image_2730601.jpg') no-repeat center center/cover;
+            height: 400px;
+            font-family: Century;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .content .card {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 800px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Filtros SVG</h1>
+    </header>
+   <nav>
+        <ul class="menu">
+            <li>
+                <a href="seminario.html">Inicio</a>
+            </li>
+            <li>
+                <a href="categoria1.html">Gestión del Ciclo de Vida de las aplicaciones</a>
+            </li>
+            <li>
+                <a href="#categoria2">Gráficos y Animación</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria2-1.html">Elementos Canvas</a></li>
+                    <li><a href="subcategoria2-2.html">Círculos y Arcos</a></li>
+                    <li><a href="subcategoria2-3.html">SVG en HTML</a></li>
+                    <li><a href="subcategoria2-4.html">Filtros SVG</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria3">Formularios</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria3-1.html">Validación en Formularios</a></li>
+                    <li><a href="subcategoria3-2.html">Número Máximo y Mínimo</a></li>
+                    <li><a href="subcategoria3-3.html">Campos Requeridos, Deshabilitados y de Lectura</a></li>
+                    <li><a href="subcategoria3-4.html">Partes de un Formulario</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria4">Diseño</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria4-1.html">Diseño, Posicionamiento y Flujo</a></li>
+                    <li><a href="subcategoria4-2.html">Posicionamiento de Elementos</a></li>
+                    <li><a href="subcategoria4-3.html">Desbordamiento</a></li>
+                    <li><a href="subcategoria4-4.html">Grid-View en CSS</a></li>
+                
+                </ul>
+            </li>
+            <li>
+                <a href="ejemplos.html">Más ejemplos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h2>¿QUÉ ES?</h2>
+            <h3>Un filtro SVG en HTML es una forma de aplicar efectos gráficos a los elementos gráficos (como imágenes, formas y texto) mediante el uso del elemento 'filter' dentro del lenguaje SVG (Scalable Vector Graphics). Los filtros SVG permiten la manipulación de los gráficos de manera avanzada, permitiendo crear efectos como desenfoque, sombras, cambios de color, y muchos otros.</h3>
+        </div>
+    </section>
+    <section class="content">
+        <div class="card">
+            <h3>Elementos</h3>
+            <p><em>1.Desenfoque (blur): </em>Este filtro difumina los bordes de un elemento, creando un efecto de desenfoque.
+            <br>
+            </p>
+            <p><em>2. Brillo (brightness): </em>Este filtro ajusta el brillo general de un elemento. Un valor mayor que 1 lo hace más brillante, mientras que un valor menor que 1 lo hace más oscuro.
+            <br>
+            <p><em>3. Contraste (contrast): </em>Este filtro ajusta la intensidad de los colores en un elemento. Un valor mayor que 1 aumenta el contraste, mientras que un valor menor que 1 lo disminuye.
+            <br>
+            </p>
+            <p><em>4. Sombra (drop-shadow):
+
+ </em>Este filtro agrega una sombra a un elemento, simulando el efecto de la luz que incide sobre él.
+            <br>
+            </p>
+            <p><em>5. Escala de grises (grayscale):
+
+ </em>Este filtro convierte un elemento a escala de grises, eliminando toda la información de color.
+            <br>
+            </p>
+            <p><em>6. Manipular el color (hue-rotate):
+ </em>Este filtro gira el espectro de colores de un elemento, creando un efecto de cambio de tono.
+            <br>
+            </p>
+            <p><em>7. Negativo (invert):
+
+ </em>Este filtro invierte los colores de un elemento, intercambiando los claros por los oscuros y viceversa.
+            <br>
+            </p>
+            <p><em>8. Opacidad (opacity):
+
+ </em>Este filtro ajusta la transparencia de un elemento. Un valor de 0 lo hace completamente transparente, mientras que un valor de 1 lo hace completamente opaco.
+            <br>
+            </p>
+            <p><em>9.  Saturación (saturate):
+
+ </em>Este filtro ajusta la intensidad de los colores en un elemento. Un valor mayor que 1 aumenta la saturación, mientras que un valor menor que 1 la disminuye.
+            <br>
+            </p>
+            <p><em>10. Sepia:
+
+ </em>Este filtro da a un elemento un tono sepia, similar al de las fotografías antiguas.
+            <br>
+            </p>
+        </div> 
+        <div class="card">
+            <h3>Código de Ejemplo:</h3>
+            <pre>
+                <code>
+   &lt;style>
+    svg {
+      border: 1px solid black;
+      background-color: lightgrey;
+      margin: 20px;
+    }
+    .blur {
+      filter: blur(5px);
+    }
+    .brightness {
+      filter: brightness(1.5);
+    }
+    .contrast {
+      filter: contrast(200%);
+    }
+    .drop-shadow {
+      filter: drop-shadow(10px 10px 5px black);
+    }
+    .grayscale {
+      filter: grayscale(100%);
+    }
+    .hue-rotate {
+      filter: hue-rotate(90deg);
+    }
+    .invert {
+      filter: invert(100%);
+    }
+    .opacity {
+      filter: opacity(50%);
+    }
+    .saturate {
+      filter: saturate(300%);
+    }
+    .sepia {
+      filter: sepia(100%);
+    }
+  &lt;style>
+&lt;body>
+  &lt;div>
+    &lt;h4>Blur</h4>
+    &lt;svg class="blur" width="100" height="100">
+      &lt;circle cx="50" cy="50" r="40" fill="blue" />
+    &lt;svg>
+  &lt;div>
+    &lt;br> 
+  &lt;div>
+    &lt;h4>Brightness</h4>
+    &lt;svg class="brightness" width="100" height="100">
+      &lt;circle cx="50" cy="50" r="40" fill="blue" />
+    &lt;svg>
+  &lt;div>
+     &lt;br>
+  &lt;div>
+    &lt;h4>Contrast</h4>
+    &lt;svg class="contrast" width="100" height="100">
+      &lt;circle cx="50" cy="50" r="40" fill="blue" />
+    &lt;svg>
+  &lt;div>
+     &lt;br>
+  &lt;div>
+    &lt;h4>Drop Shadow</h4>
+    &lt;svg class="drop-shadow" width="100" height="100">
+      &lt;circle cx="50" cy="50" r="40" fill="blue" />
+    &lt;svg>
+  &lt;div>
+     &lt;br>
+  &lt;div>
+    &lt;h4>Grayscale</h4>
+    &lt;svg class="grayscale" width="100" height="100">
+      &lt;circle cx="50" cy="50" r="40" fill="blue" />
+    &lt;svg>
+  &lt;div>
+     &lt;br>
+  &lt;div>
+    &lt;h4>Hue Rotate</h4>
+    &lt;svg class="hue-rotate" width="100" height="100">
+      &lt;circle cx="50" cy="50" r="40" fill="blue" />
+    &lt;svg>
+  &lt;div>
+     &lt;br>
+  &lt;div>
+    &lt;h4>Invert</h4>
+    &lt;svg class="invert" width="100" height="100">
+      &lt;circle cx="50" cy="50" r="40" fill="blue" />
+    &lt;svg>
+  &lt;div>
+     &lt;br>
+  &lt;div>
+    &lt;Opacity</h4>
+    &lt;svg class="opacity" width="100" height="100">
+      &lt;circle cx="50" cy="50" r="40" fill="blue" />
+    &lt;svg>
+  &lt;div>
+     &lt;br>
+  &lt;div>
+    &lt;h4>Saturate</h4>
+    &lt;svg class="saturate" width="100" height="100">
+      &lt;circle cx="50" cy="50" r="40" fill="blue" />
+    &lt;svg>
+  &lt;div>
+     &lt;br>
+  &lt;div>
+    &lt;h4>Sepia</h4>
+    &lt;svg class="sepia" width="100" height="100">
+      &lt;circle cx="50" cy="50" r="40" fill="blue" />
+                </code>
+            </pre>
+        </div>
+        
+    </section>
+    
+
+    <header>
+        <h1>Ejemplo</h1>
+    </header>
+    <section class="content">
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    svg {
+      border: 1px solid black;
+      background-color: lightgrey;
+      margin: 20px;
+    }
+    .blur {
+      filter: blur(5px);
+    }
+    .brightness {
+      filter: brightness(1.5);
+    }
+    .contrast {
+      filter: contrast(200%);
+    }
+    .drop-shadow {
+      filter: drop-shadow(10px 10px 5px black);
+    }
+    .grayscale {
+      filter: grayscale(100%);
+    }
+    .hue-rotate {
+      filter: hue-rotate(90deg);
+    }
+    .invert {
+      filter: invert(100%);
+    }
+    .opacity {
+      filter: opacity(50%);
+    }
+    .saturate {
+      filter: saturate(300%);
+    }
+    .sepia {
+      filter: sepia(100%);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h4>Blur</h4>
+    <svg class="blur" width="100" height="100">
+      <circle cx="50" cy="50" r="40" fill="blue" />
+    </svg>
+  </div>
+    <br> 
+  <div>
+    <h4>Brightness</h4>
+    <svg class="brightness" width="100" height="100">
+      <circle cx="50" cy="50" r="40" fill="blue" />
+    </svg>
+  </div>
+     <br>
+  <div>
+    <h4>Contrast</h4>
+    <svg class="contrast" width="100" height="100">
+      <circle cx="50" cy="50" r="40" fill="blue" />
+    </svg>
+  </div>
+     <br>
+  <div>
+    <h4>Drop Shadow</h4>
+    <svg class="drop-shadow" width="100" height="100">
+      <circle cx="50" cy="50" r="40" fill="blue" />
+    </svg>
+  </div>
+     <br>
+  <div>
+    <h4>Grayscale</h4>
+    <svg class="grayscale" width="100" height="100">
+      <circle cx="50" cy="50" r="40" fill="blue" />
+    </svg>
+  </div>
+     <br>
+  <div>
+    <h4>Hue Rotate</h4>
+    <svg class="hue-rotate" width="100" height="100">
+      <circle cx="50" cy="50" r="40" fill="blue" />
+    </svg>
+  </div>
+     <br>
+  <div>
+    <h4>Invert</h4>
+    <svg class="invert" width="100" height="100">
+      <circle cx="50" cy="50" r="40" fill="blue" />
+    </svg>
+  </div>
+     <br>
+  <div>
+    <h4>Opacity</h4>
+    <svg class="opacity" width="100" height="100">
+      <circle cx="50" cy="50" r="40" fill="blue" />
+    </svg>
+  </div>
+     <br>
+  <div>
+    <h4>Saturate</h4>
+    <svg class="saturate" width="100" height="100">
+      <circle cx="50" cy="50" r="40" fill="blue" />
+    </svg>
+  </div>
+     <br>
+  <div>
+    <h4>Sepia</h4>
+    <svg class="sepia" width="100" height="100">
+      <circle cx="50" cy="50" r="40" fill="blue" />
+    </svg>
+  </div>
+        
+    </section>
+    <footer>
+        <p>&copy;2024 SEMINARIO PLANTEL CECYTEM METEPEC II REGINA MARTÍNEZ GONZÁLEZ</p>
+    </footer>
+</body>
+</html>

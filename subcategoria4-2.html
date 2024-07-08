@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+    
+<body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Century Schoolbook;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background-color:  #61b2e5;
+            font-family: Snowy Night;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f8d2e8;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            background-color: black;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+        }
+
+        nav ul li ul.submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f8d2e8;
+            list-style: none;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li:hover ul.submenu {
+            display: block;
+        }
+
+        nav ul li ul.submenu li {
+            margin: 0;
+        }
+
+        nav ul li ul.submenu li a {
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+
+
+        .hero {
+            background: url('https://png.pngtree.com/thumb_back/fw800/background/20230519/pngtree-4k-animated-3d-background-with-colorful-spheres-in-3d-image_2610205.jpg') no-repeat center center/cover;
+            height: 400px;
+            font-family: Century;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .content .card {
+            background: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 500px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Posicionamiento</h1>
+    </header>
+   <nav>
+        <ul class="menu">
+            <li>
+                <a href="seminario.html">Inicio</a>
+            </li>
+            <li>
+                <a href="categoria1.html">Gestión del Ciclo de Vida de las aplicaciones</a>
+            </li>
+            <li>
+                <a href="#categoria2">Gráficos y Animación</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria2-1.html">Elementos Canvas</a></li>
+                    <li><a href="subcategoria2-2.html">Círculos y Arcos</a></li>
+                    <li><a href="subcategoria2-3.html">SVG en HTML</a></li>
+                    <li><a href="subcategoria2-4.html">Filtros SVG</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria3">Formularios</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria3-1.html">Validación en Formularios</a></li>
+                    <li><a href="subcategoria3-2.html">Número Máximo y Mínimo</a></li>
+                    <li><a href="subcategoria3-3.html">Campos Requeridos, Deshabilitados y de Lectura</a></li>
+                    <li><a href="subcategoria3-4.html">Partes de un Formulario</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#categoria4">Diseño</a>
+                <ul class="submenu">
+                    <li><a href="subcategoria4-1.html">Diseño, Posicionamiento y Flujo</a></li>
+                    <li><a href="subcategoria4-2.html">Posicionamiento de Elementos</a></li>
+                    <li><a href="subcategoria4-3.html">Desbordamiento</a></li>
+                    <li><a href="subcategoria4-4.html">Grid-View en CSS</a></li>
+                  
+                </ul>
+            </li>
+            <li>
+                <a href="ejemplos.html">Más ejemplos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h2>¿QUÉ ES?</h2>
+            <h3> 
+En HTML y CSS, el posicionamiento de elementos se refiere a la técnica de controlar la ubicación exacta de cada elemento HTML dentro de una página web. Esto se logra utilizando propiedades CSS como position, top, left, bottom y right, que permiten mover los elementos en relación con otros elementos o con los bordes de la ventana del navegador. </h3>
+        </div>
+    </section>
+    <section class="content">
+        <div class="card">
+            <h2>Posicionamiento estático (static)</h2>
+            <p>Es el valor predeterminado para todos los elementos. Los elementos posicionados estáticamente se colocan en el flujo normal del documento, es decir, se ubican uno después del otro según el orden en que aparecen en el código HTML.
+            <br>
+        </div>
+        <div class="card">
+            <h2>Posicionamiento relativo (relative)</h2>
+            <p>Mueve el elemento de su posición normal en el flujo del documento, pero sin afectar el flujo de otros elementos a su alrededor. Los cambios de posición se calculan en relación con la posición original del elemento.
+        </div>
+    
+        <div class="card">
+            <h2>Posicionamiento absoluto (absolute)</h2>
+            <p>Retira el elemento del flujo normal del documento y lo posiciona en relación con su contenedor más cercano (generalmente el elemento padre). Los cambios de posición se calculan en relación con el borde del contenedor.
+
+        </div>
+        
+        <div class="card">
+            <h2>Posicionamiento fijo (fixed) </h2>
+            <p> Posiciona el elemento en relación con la ventana del navegador, lo que significa que permanece en la misma posición incluso cuando se desplaza la página. Es útil para elementos que deben permanecer visibles en todo momento, como encabezados o barras laterales.
+        </div>
+        <div class="card">
+            <h2>Propiedades </h2>
+            <p> <em>position:</em> Establece el tipo de posicionamiento que se aplicará al elemento. Los valores posibles son static, relative, absolute y fixed.
+<br>
+<em>top:</em> Define la distancia vertical entre el borde superior del elemento y el borde superior de su contenedor o de la ventana del navegador (dependiendo del tipo de posicionamiento).
+<br>
+<em>left:</em> Define la distancia horizontal entre el borde izquierdo del elemento y el borde izquierdo de su contenedor o de la ventana del navegador (dependiendo del tipo de posicionamiento).
+<br>
+<em>bottom:</em> Define la distancia vertical entre el borde inferior del elemento y el borde inferior de su contenedor o de la ventana del navegador (dependiendo del tipo de posicionamiento).
+<br>
+<em>right:</em> Define la distancia horizontal entre el borde derecho del elemento y el borde derecho de su contenedor o de la ventana del navegador (dependiendo del tipo de posicionamiento).
+        </div>
+        
+       <div class="card">
+            <h3>Código de Ejemplo:</h3>
+            <pre>
+                <code>
+    &lt;section class="flexbox">
+            &lt;h2>Flexbox&lt;/h2>
+            &lt;div class="container">
+                &lt;div class="item">Elemento 1&lt;/div>
+                &lt;div class="item">Elemento 2&lt;/div>
+                &lt;div class="item">Elemento 3&lt;/div>
+            &lt;/div>
+        &lt;/section>
+        &lt;section class="grid">
+            &lt;h2>Grid&lt;/h2>
+            &lt;div class="container">
+                &lt;div class="item">Elemento 1&lt;/div>
+                &lt;div class="item">Elemento 2&lt;/div>
+                &lt;div class="item">Elemento 3&lt;/div>
+                &lt;div class="item">Elemento 4&lt;/div>
+            &lt;/div>
+        &lt;/section>
+        &lt;section class="positioning">
+            &lt;h2>Positioning&lt;/h2>
+            &lt;div class="relative-container">
+                &lt;div class="box relative">Elemento Relativo&lt;/div>
+                &lt;div class="box absolute">Elemento Absoluto&lt;/div>
+                &lt;div class="box fixed">Elemento Fijo&lt;/div>
+            &lt;/div>
+        &lt;/section>
+                </code>
+            </pre>
+        </div>
+    </section>
+    
+
+    <header>
+       <h1>Ejemplo</h1>
+    </header>
+    <section class="content">
+        
+        <div class="card">
+       
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento de Elementos</title>
+    <link rel="stylesheet" href="ejem2.css">
+</head>
+<body>
+    
+    <main>
+        <section class="flexbox">
+            <h2>Flexbox</h2>
+            <div class="container">
+                <div class="item">Elemento 1</div>
+                <div class="item">Elemento 2</div>
+                <div class="item">Elemento 3</div>
+            </div>
+        </section>
+        <section class="grid">
+            <h2>Grid</h2>
+            <div class="container">
+                <div class="item">Elemento 1</div>
+                <div class="item">Elemento 2</div>
+                <div class="item">Elemento 3</div>
+                <div class="item">Elemento 4</div>
+            </div>
+        </section>
+        <section class="positioning">
+            <h2>Positioning</h2>
+            <div class="relative-container">
+                <div class="box relative">Elemento Relativo</div>
+                <div class="box absolute">Elemento Absoluto</div>
+                <div class="box fixed">Elemento Fijo</div>
+            </div>
+        </section>
+    </main>
+</body>
+    </section>
+    </body>
+    </html>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;2024 SEMINARIO PLANTEL CECYTEM METEPEC II REGINA MARTÍNEZ GONZÁLEZ</p>
+    </footer>
